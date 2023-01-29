@@ -15,7 +15,7 @@ blueCar.addEventListener("animationiteration", function(){
     })
 
 window.addEventListener("keydown",function(e){
-    if(e.keyCode == "39"){
+    if(e.keyCode == 39){
         var redCarleft = parseInt(window.getComputedStyle(redCar).getPropertyValue("left"))
         if(redCarleft < 260 ){
             redCar.style.left=(redCarleft + 130)+ "px";
@@ -24,7 +24,7 @@ window.addEventListener("keydown",function(e){
 
 
 
-    if(e.keyCode == "37"){
+    if(e.keyCode == 37){
         var redCarleft = parseInt(window.getComputedStyle(redCar).getPropertyValue("left"))
         if(redCarleft > 0){
             redCar.style.left = (redCarleft - 130) + "px";
@@ -40,7 +40,7 @@ setInterval(function Gameover (){
     if((bluecarLeft === redcarleft) && (bluecarTop > 250) && (bluecarTop < 450)){
         result.style.display = "block";
         game.style.display = "none";   
-        score.innerHTML = 'Youre Score is  ${counter}';
+        score.innerHTML = `Youre Score is  ${counter}`;
         console.log(counter);
         
         counter = 0;
